@@ -61,6 +61,6 @@ module.exports = {
     }
   },
   generate:{
-    dir:'doc'
+    dir:'docs'
   }
 }
