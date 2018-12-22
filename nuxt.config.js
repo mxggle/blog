@@ -27,6 +27,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@/assets/css/common.less'
   ],
 
   /*
@@ -48,7 +49,8 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
-
+  proxy: {
+  },
   /*
   ** Build configuration
   */
