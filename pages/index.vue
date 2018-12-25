@@ -20,6 +20,7 @@
 <script>
 
 export default {
+  layout: 'full',
   components: {
   },
   created(){
@@ -43,10 +44,10 @@ export default {
       height: 100%;
       background:#1B2030  url(https://area.sinaapp.com/bingImg/) center center no-repeat;
       background-size: cover;
-			-webkit-transform: translateZ(0) scale(1.0, 1.0);
-			transform: translateZ(0);
-			animation: grow 50s linear 10ms infinite;
-      transition: all 0.2s ease-in-out;
+			// -webkit-transform: translateZ(0) scale(1.0, 1.0);
+			// transform: translateZ(0);
+			// animation: grow 50s linear 10ms infinite;
+      // transition: all 0.2s ease-in-out;
 			z-index: -2
     }
     @keyframes grow {
@@ -84,6 +85,11 @@ export default {
           background-color: #fff;
           color: #000;
         }
+      }
+    }
+    .links{
+      .iconfont{
+        color: #fff;
       }
     }
   }
