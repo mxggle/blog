@@ -11,13 +11,15 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
-    "@nuxtjs/axios": "^5.0.0"
+    "markdown-it": "^8.4.2",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
   }
 }

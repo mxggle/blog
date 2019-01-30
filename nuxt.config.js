@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const path = require('path');
 
 module.exports = {
   mode: 'universal',
@@ -32,13 +33,15 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/css/common.less'
+    '@/assets/css/common.less',
+    '@/assets/css/markdown.less'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    // '@/plugins/components'
   ],
 
   /*
@@ -47,6 +50,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios'
+
   ],
   /*
   ** Axios module configuration
@@ -60,11 +64,23 @@ module.exports = {
   ** Build configuration
   */
   build: {
+
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+      config.module.rules.push({
+        test: /\.md$/,
+        loaders: [
+          'vue-loader',
+          {
+            loader:require.resolve('./build/markdown-loader'),
+            options: {
+              containerClass: 'markdown-container'
+            }
+          }
+        ]
+      })
     }
   },
   generate:{
