@@ -6,17 +6,22 @@ module.exports = {
   /*
   ** Headers of the page
   */
-  head: {
-    title: pkg.name,
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
+ head: {
+  title: pkg.name,
+  meta: [
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { hid: 'description', name: 'description', content: pkg.description }
+  ],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { 
+      rel: 'stylesheet', 
+      href: 'https://fonts.googleapis.com/css?family=Anton|Josefin+Sans|Lobster|Major+Mono+Display|Monoton|Oswald:700|Permanent+Marker|Staatliches|Ubuntu' 
+    }
+  ],
+
+},
 
   /*
   ** Customize the progress-bar color
@@ -27,6 +32,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@/assets/css/common.less',
+    '@/assets/css/markdown.less'
   ],
 
   /*
