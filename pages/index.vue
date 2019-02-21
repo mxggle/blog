@@ -5,7 +5,7 @@
       <h1 class="title">SHUIZHENYANG</h1>
       <p class="bio">A Front-end Engineer</p>
       <div class="btn-group">
-        <nuxt-link to="/articles/" class="btn">START</nuxt-link>
+        <nuxt-link to="/catalogue" class="btn">START</nuxt-link>
       </div>
       <div class="links">
         <a href=""><i class="iconfont logo-github"></i></a>

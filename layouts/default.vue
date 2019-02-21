@@ -23,7 +23,7 @@
 </template>
 
 <style lang="less" scoped>
-@containerWidth:600px ;
+@containerWidth:780px ;
 .layout{
   position: absolute;
   top: 0;

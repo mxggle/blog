@@ -32,8 +32,9 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    'highlight.js/styles/atom-one-dark.css',
     '@/assets/css/common.less',
-    '@/assets/css/markdown.less'
+    '@/assets/css/markdown.less',
   ],
 
   /*
