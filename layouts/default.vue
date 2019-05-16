@@ -3,13 +3,13 @@
     <div class="header">
         <div class="header-inner">
           <div class="title">
-            b
+            MUGGLE
           </div>
           <div class="links">
-            <nuxt-link to="/" class="link">HOME</nuxt-link>
-            <a href="/index" class="link">GIHUB</a>
-            <a href="/index" class="link">TWITTER</a>
-            <nuxt-link to="/index" class="link">ABOUT</nuxt-link>
+            <nuxt-link to="/" class="link">Home</nuxt-link>
+            <a href="https://github.com/mxggle" target="_b" class="link">GitHub</a>
+            <a href="https://twitter.com/shuizheny" target="_b" class="link">Twitter</a>
+            <!-- <nuxt-link to="/" class="link">ABOUT</nuxt-link> -->
           </div>
         </div>
     </div>
@@ -34,11 +34,11 @@
     .header-inner{
       margin: 0 auto;
       width: @containerWidth;
-      height: 95px;
+      height: 110px;
       text-align: center;
       border-bottom: 1px solid rgba(0, 0, 0, .3);
       .title{
-        margin: 30px 0 30px;
+        margin: 30px 0 50px;
         font-size: 30px;
         color: #666;
       }
@@ -56,7 +56,7 @@
     }
   }
   .content{
-    padding: 60px 0px;
+    padding: 50px 0px 60px;
     margin: 0 auto;
     width: @containerWidth;
   }

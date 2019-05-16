@@ -3,7 +3,7 @@
       <nuxt-link :to="`/articles/${data.title}`">
         <div class="title">{{data.title}}</div>
         <div class="info">
-            <span class="info-item">{{data.date}}</span>
+            <span class="info-item">{{data.date | timeFormatter}}</span>
         </div>
         <div class="content">{{data.content}}</div>
       </nuxt-link>
@@ -11,14 +11,19 @@
 </template>
 
 <script>
+
 export default {
   components: {
   },
   props:{
-      data:{
-          type:Object,
-          require:true
-      }
+		data:{
+			type:Object,
+			require:true
+		}
+  },
+  data(){
+    return {
+    }
   }
 }
 </script>

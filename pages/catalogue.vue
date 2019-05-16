@@ -1,26 +1,44 @@
 <template>
-  <section class="container">
-      <Article v-for="item in data" :key="item.title" :data="item"/>
-  </section>
+  <div class="container">
+      <Article v-for="item in pageData" :key="item.title" :data="item"/>
+      <Pagination :data="data" :page="page" @onChange="pageChange" :pageSize="pageSize"/>
+  </div>
 </template>
 
 <script>
+import dayjs from 'dayjs';
 import list from '@/api/attributes'
 import Article from '@/components/article'
+import Pagination from '@/components/pagination'
+
 export default {
   components:{
-    Article
+    Article,
+    Pagination
   },
   data(){
     return {
-      data:[]
+      data:[],
+      page:1,
+      pageSize:5,
+      source:list
+    }
+  },
+  computed:{
+    pageData(){
+      return this.data.slice((this.page - 1)* this.pageSize,this.page * this.pageSize)
     }
   },
   created(){
-    this.data = list.sort(function(x,y){
-      new Date(x.date).valueOf() - new Date(y.date).valueOf() 
-    })
-    console.log(this.data)
+      this.data = this.source.sort(function(x,y){
+        return dayjs(y.date).valueOf() - dayjs(x.date).valueOf()
+      });
+    
+  },
+  methods:{
+    pageChange(page){
+      this.page = page;
+    }
   }
 }
 </script>
